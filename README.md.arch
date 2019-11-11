@@ -1,0 +1,55 @@
+# Pea
+
+## Getting Started
+* Install git, and generate your ssh key, then add to the git project
+* Install npm, ionic
+* Install gsutil
+
+    git clone git@gitlab.com:paoro/pea.git
+    cd pea
+    npm install
+
+## Google Cloud Storage
+    
+    gsutil defacl ch -u AllUsers:R gs://pea.paoro.biz
+    gsutil rsync -R platforms\browser\www gs://pea.paoro.biz
+
+## FAQ
+### FAILURE: Build failed with an exception. 
+```
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Could not resolve all files for configuration ':app:debugCompileClasspath'.
+> Could not find runtime.jar (android.arch.lifecycle:runtime:1.0.0).
+  Searched in the following locations:
+      https://jcenter.bintray.com/android/arch/lifecycle/runtime/1.0.0/runtime-1.0.0.jar
+> Could not find common.jar (android.arch.core:common:1.0.0).
+  Searched in the following locations:
+      https://jcenter.bintray.com/android/arch/core/common/1.0.0/common-1.0.0.jar
+```
+
+Solution:
+
+https://forum.ionicframework.com/t/cannot-build-because-missing-common-1-0-0-jar/132462/6
+
+Open `build.gradle` then apply the following changes: 
+
+Before:
+```
+repositories {
+    jcenter()
+    maven {
+        url "https://maven.google.com"
+    }
+}
+```
+After:
+```
+repositories {
+    maven {
+        url "https://maven.google.com"
+    }
+    jcenter()
+}
+```

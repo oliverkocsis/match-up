@@ -1,0 +1,31 @@
+<ion-content style="background: url('assets/imgs/background-win.jpg') center no-repeat; background-size: cover;">
+    <ion-grid fixed padding>
+        <ion-row padding margin>
+            <ion-col>
+                &nbsp;
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col col-8 offset-2 col-md-6 offset-md-3 col-lg-4 offset-lg-4>
+                <card src="assets/icon/trophy.svg" visible="true"></card>
+            </ion-col>
+        </ion-row>
+        <ion-row padding>
+            <ion-col>
+                &nbsp;
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col col-4 offset-2 col-md-3 offset-md-3 col-lg-2 offset-lg-4>
+                <button ion-button icon-only color="secondary" round block (click)="onHome()">
+                    <ion-icon name="home"></ion-icon>
+                </button>
+            </ion-col>
+            <ion-col col-4 col-md-3 col-lg-2>
+                <button ion-button icon-only color="secondary" round block (click)="onRefresh()">
+                    <ion-icon name="refresh"></ion-icon>
+                </button>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>About</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <button ion-item [navPush]="privacy">Privacy Policy</button>
+    <button ion-item [navPush]="credit">Credits</button>
+    <button ion-item [navPush]="contact">Contact Us</button>
+    <button ion-item [navPush]="logs">Logs</button>
+    <ion-item>
+      <h2>Build</h2>
+      <p>Version Code: {{versionCode}}</p>
+      <p>Version Number: {{versionNumber}}</p>
+    </ion-item>
+  </ion-list>
+</ion-content>

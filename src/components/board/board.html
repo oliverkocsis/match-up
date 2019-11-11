@@ -1,0 +1,7 @@
+<ion-grid [ngStyle]="{'max-width.px': maxWidth}">
+  <ion-row *ngFor="let row of gameProvider.cards; index as y" nowrap align-items-center justify-content-center>
+    <ion-col *ngFor="let card of row; index as x" class="pea" align-self-stretch>
+      <card [src]="card.src" [visible]="card.visible" [enabled]="card.enabled" [match]="card.match" (change)="onCardChange($event, x, y)"></card>
+    </ion-col>
+  </ion-row>
+</ion-grid>

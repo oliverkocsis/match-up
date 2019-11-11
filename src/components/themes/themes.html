@@ -1,0 +1,17 @@
+<ion-grid fixed>
+  <ion-row>
+    <ion-col col-2 col-md-3 col-lg-4 align-self-center (click)="onPrev()">
+      <ion-icon name="ios-arrow-dropleft" color="secondary" class="pea" float-end></ion-icon>
+    </ion-col>
+    <ion-col col-8 col-md-6 col-lg-4 (click)="onNext()">
+      <ion-slides effect="flip" loop="true" (ionSlideDidChange)="onSlideDidChange($event)">
+        <ion-slide *ngFor="let theme of themesProvider.themes">
+          <card [src]="icon(theme.name)" [enabled]="false" [visible]="true"></card>
+        </ion-slide>
+      </ion-slides>
+    </ion-col>
+    <ion-col col-2 col-md-3 col-lg-4 align-self-center (click)="onNext()">
+      <ion-icon name="ios-arrow-dropright" color="secondary" class="pea" float-start></ion-icon>
+    </ion-col>
+  </ion-row>
+</ion-grid>

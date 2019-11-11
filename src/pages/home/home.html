@@ -1,0 +1,10 @@
+<ion-content padding-top style="background: url('assets/imgs/background.jpg') center no-repeat; background-size: cover;">
+  <ion-fab bottom right [navPush]="about">
+    <button ion-fab mini color="light">
+      <ion-icon name="information-circle"></ion-icon>
+    </button>
+  </ion-fab>
+  <themes></themes>
+  <levels *ngIf="themesProvider.selected.free || themesProvider.selected.purchased" (select)="onSelectLevel($event)"></levels>
+  <purchase *ngIf="!themesProvider.selected.free &amp;&amp; !themesProvider.selected.purchased"></purchase>
+</ion-content>

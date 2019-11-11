@@ -1,0 +1,12 @@
+<ion-grid fixed>
+  <ion-row *ngFor="let level of levels; index as i;">
+    <ion-col col-8 offset-2 col-md-6 offset-md-3 col-lg-4 offset-lg-4>
+      <button *ngIf="large()" ion-button icon-only full round large color="secondary" (click)="onClick(level[0], level[1])" [disabled]="level[0] * level[1] &gt; max(themesProvider.selected.name)">
+        <ion-icon *ngFor="let j of repeat(i + 1)" name="paw" style="padding: 0px 8px;"></ion-icon>
+      </button>
+      <button *ngIf="!large()" ion-button icon-only full round color="secondary" (click)="onClick(level[0], level[1])" [disabled]="level[0] * level[1] &gt; max(themesProvider.selected.name)">
+        <ion-icon *ngFor="let j of repeat(i + 1)" name="paw" style="padding: 0px 8px;"></ion-icon>
+      </button>
+    </ion-col>
+  </ion-row>
+</ion-grid>

@@ -1,0 +1,16 @@
+{
+  "name": "Match Up",
+  "short_name": "Match Up",
+  "start_url": "index.html",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "assets/imgs/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "background_color": "#4e8ef7",
+  "theme_color": "#4e8ef7",
+  "play_store_key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA7Q8GVspGpe7WugOgdkiy4GCOXl0KA3llfaW/tqVNZppc3+DE2hF4Y7J4i3IBruIZDbkvOIEcuwrPnZ4AJPXHU+AqNmvnzir6Ih9fvlqSE0Mm64zIR6ssob2p5pM6IsleWxN5gINONsqiqnHA673E17VOJ+7loMQ2f64t22NSWxliAt8DKaNUt8N3dCEwPJg1k42Wsgg8QIpUM43PdZo9cnLjt58uPrI0eke2fseAtEc9YyjAwXYQkEoHma8HST/mWQLpJP5P+4kn3nzEB0RVirO3etLIGZLgJqnKUe7AwmN2cvfkM4C/wwl5kGMn4Pre7BmyGttpNhce35G0/0oNRQIDAQAB"
+}
